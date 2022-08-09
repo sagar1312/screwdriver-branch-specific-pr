@@ -1,0 +1,12 @@
+shared:
+  image: node:12
+
+jobs:
+  main:
+    requires: [ ~commit, ~pr ]
+    steps:
+       - echo "commits or PRs against pipeline branch"
+  alpha-prs:
+    requires: [ ~pr:alpha ]
+    steps:
+       - echo "PR against alpha branch"
