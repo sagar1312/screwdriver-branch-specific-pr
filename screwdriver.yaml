@@ -3,7 +3,7 @@ shared:
 
 jobs:
   main:
-    requires: [ ~commit, ~pr ]
+    requires: [ ~commit ]
     steps:
        - echo "commits or PRs against pipeline branch"
   alpha-prs:
